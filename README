@@ -1,0 +1,13 @@
+# Custom One-Page WordPress Theme
+
+## Installation:
+
+1. **Download the Theme:**
+- Extract its contents into the `wp-content/themes/` folder of your local WordPress.
+
+2. **Activate the Theme:**
+- Log in to the WordPress admin panel.
+- url: http://task15.local/
+- admin url : http://task15.local/wp-admin/ name: admin; password: 123456
+- Navigate to "Appearance" -> "Themes."
+- Activate the WordPress Theme."

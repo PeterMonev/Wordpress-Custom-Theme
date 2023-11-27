@@ -1,0 +1,546 @@
+/** 
+ Theme Name: Fictional Theme
+ Author: Peter Monev
+ Version: 1.0
+*/
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+  background-color: bisque;
+  text-decoration: none;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: 1s;
+}
+
+.header.header-scroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.8;
+  transition: 1s;
+  padding-top: 40px;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav a {
+  color: bisque;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 1s;
+}
+
+.nav li a:hover {
+  color: red;
+}
+
+.logo img {
+  max-width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  border: 5px solid cornsilk;
+  transition: 2s;
+}
+
+.logo img:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+
+/* Main */
+
+section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  color: whitesmoke;
+}
+
+article {
+  margin: 2% 10% 10% 10%;
+}
+
+main section:nth-child(2) {
+  background-color: aquamarine;
+}
+
+main section:nth-child(3) {
+  background-color: lightsalmon;
+}
+
+main section:nth-child(4) {
+  background-color: lightseagreen;
+}
+
+/* Hero Section */
+.hero__article {
+  width: 40%;
+  min-width: 370px;
+  height: 450px;
+  text-align: center;
+  border: 3px solid whitesmoke;
+  border-radius: 60px;
+  box-shadow: 5px 22px 50px 10px rgba(0, 0, 0, 0.67);
+  background-image: url("./assets/amazing-sunset-mountain-scenery-with-inversion-picjumbo-com.jpg");
+  background-position: center;
+  background-size: cover;
+  animation: fadeIn 2s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hero__article h1 {
+  font-size: 32px;
+  margin-top: -30px;
+}
+
+.hero__article p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.hero__article button {
+  width: 20%;
+  min-width: 30%;
+  margin: 0 auto;
+  padding: 10px 5px;
+  border: 2px solid white;
+  border-radius: 60px;
+  background: none;
+  color: wheat;
+  font-size: 18px;
+  transition: 0.8s;
+}
+
+.hero__article button:hover {
+  color: red;
+  border: 2px solid bisque;
+  transform: scale(1.2) rotate(360deg);
+}
+
+/* About Section */
+
+.about {
+  margin: auto;
+  height: auto;
+  min-height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 1% 0;
+}
+
+.about article {
+  margin: auto;
+  width: 10%;
+  min-width: 320px;
+  height: 450px;
+  text-align: center;
+  border: 3px solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  box-shadow: 5px 22px 50px 10px rgba(0, 0, 0, 0.67);
+  background-image: url("./assets/daniel-kainz-FdkF3FKWeK0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  animation: fadeIn 2s both;
+}
+
+.about__aricle h2 {
+  font-size: 32px;
+  text-decoration: underline;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.about__aricle p {
+  font-size: 18px;
+
+}
+
+.about__div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.about__div p,
+span {
+  margin: auto;
+  flex: 0 0 0 0 calc(30% - 20px);
+  flex: 1; 
+  min-width: 120px;
+}
+
+.about__div span {
+  color: bisque;
+}
+
+.about__article__img {
+  position: relative;
+}
+
+.about__article__img div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+}
+
+.about__article__img div:nth-child(1) {
+  left: 5%;
+  top: 5%;
+  background-image: url("./assets/waldemar-s3EjzLRA4Yw-unsplash.jpg");
+  animation: slideLeft 2s both;
+}
+
+.about__article__img div:nth-child(2) {
+  right: 5%;
+  bottom: 5%;
+  background-image: url("./assets/yoshi-takekawa-7wk0ja-DP_c-unsplash.jpg");
+  animation: slideRigth 2s both;
+}
+
+.about__article__img div img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Service Section */
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+.services__h1 {
+  margin: 40px 0 20px 0;
+  font-size: 32px;
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.service {
+  width: 30%;
+  text-align: center;
+  padding: 30px;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  box-shadow: 5px 22px 50px 10px rgba(0, 0, 0, 0.67);
+  background: linear-gradient(
+    155deg,
+    rgba(32, 178, 170, 1) 44%,
+    rgba(255, 160, 122, 1) 65%
+  );
+  font-style: italic;
+}
+
+.service img {
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  box-shadow: 5px 22px 50px 10px rgba(0, 0, 0, 0.67);
+  margin: 15px 0;
+  width: 90%;
+}
+
+/* Contact Section */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+}
+
+.contact__h1 {
+  font-size: 32px;
+  text-decoration: underline;
+  font-style: italic;
+  margin: 10px 0 20px 0;
+}
+
+.article__contact {
+  display: flex;
+  flex-direction: row;
+  margin: 40px auto 150px auto;
+  width: 80%;
+  border: 2px solid whitesmoke;
+  border-radius: 30px;
+  box-shadow: 5px 22px 50px 10px rgba(0, 0, 0, 0.67);
+
+}
+
+.contact__div__left {
+  width: 50%;
+  background-color: lightpink;
+  padding: 40px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px;
+  border-radius: 30px 0px 0px 30px;
+
+}
+
+.contact__div__left  h2,p  {
+  margin: 20px 0;
+}
+
+
+.contact__form {
+  width: 50%;
+  background-color: lightskyblue;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px 30px 30px 0px;
+}
+
+#contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__form__h2 {
+  margin: 20px 0;
+}
+
+#contact__form input,textarea {
+  margin: 10px;
+  width: 80%;
+  border: 2px solid lightseagreen;
+  border-radius: 40px;
+  height: 10%;
+  padding: 5px 25px;
+}
+
+#contact__form textarea {
+  height: 20%;
+}
+
+#contact__form label {
+  margin: 5px !important;
+}
+
+#contact__form button {
+  margin: 20px auto;
+  padding: 10px 25px;
+  border: 2px solid white;
+  border-radius: 60px;
+  background: none;
+  color: wheat;
+  font-size: 18px;
+  transition: 0.8s;
+}
+
+#contact__form button:hover {
+  color: red;
+  border: 2px solid bisque;
+  transform: scale(1.2) rotate(360deg);
+}
+/* Footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer i {
+  color: bisque;
+  margin: 5px;
+  font-size: 18px;
+  transition: 1s;
+}
+
+.footer i:hover {
+  color: red;
+  transform: scale(1.5) rotate(360deg);
+}
+
+/* Responsive */
+@media screen and (max-width: 1100px) {
+  .about {
+    flex-direction: column;
+    padding: 10% 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .services__article {
+    flex-direction: column;
+    padding: 10% 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .service {
+    width: 80%;
+  }
+
+  .article__contact {
+    flex-direction: column;
+  }
+
+  .contact__div__left {
+    width: 100%;
+    border-radius: 30px 30px 0px 0px;
+    padding: 0px;
+
+  }
+
+  .contact__div__left p {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+
+  .contact__form {
+    width: 100%;
+    border-radius: 0px 0px 30px 30px;
+   
+  }
+
+  .contact__form__h2 {
+    margin: 20px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    padding-top: 2% !important;
+  }
+
+  .logo img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav ul a {
+    font-size: 16px;
+  }
+
+  /* Hero Section */
+
+  .section {
+    height: 85vh;
+  }
+
+  .hero__article h1 {
+    font-size: 26px;
+  }
+
+  .hero__article p {
+    font-size: 16px;
+  }
+}
+
+/* Animatios */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRigth {
+  0% {
+    opacity: 0;
+    transform: translateX(2000%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
